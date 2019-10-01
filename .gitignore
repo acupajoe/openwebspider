@@ -1,5 +1,7 @@
 node_modules/
-conf/
-
-*.pdf
 package.lock
+
+*.pem
+*.csr
+*.conf
+*.pdf

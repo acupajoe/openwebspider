@@ -1,51 +1,46 @@
 # openwebspider(js)
+
 Open Source Web Spider
 
-
 ## Requirements
-* MySQL Server / PostgreSQL
-* nodejs
 
+- MySQL Server / PostgreSQL
+- nodejs
+- pdftotext (`brew install poppler`)
+- `openssl` (to generate a self-signed certificate)
 
 ## Install
+
 ```sh
 $ npm install
 $ node src/server.js
+
+# Create Self Signed Certificate
+$ cd conf
+$ openssl genrsa -out .client-key.pem 2048
+$ openssl req -new -key client-key.pem -out client.csr
+$ openssl x509 -req -in client.csr -signkey client-key.pem -out client-cert.pem
 ```
 
-
 ## Getting started
-* Open a web-browser at http://127.0.0.1:9999/
-* Go in the third tab (Database) and configure your settings
-* Verify that openwebspider correctly connects to your server by clicking the "Verify" button
-* "Save" your configuration
-* "Create DB"; this will create all tables needed by openwebspider
-* (remember that this will remove all existing tables and will create them from scratch)
-* Now you are ready to start an openwebspider worker; first tab (Worker): Go
+
+- Open a web-browser at [https://127.0.0.1:9999/](https://127.0.0.1:9999/)
+- Go in the third tab (Database) and configure your settings
+- Verify that openwebspider correctly connects to your server by clicking the "Verify" button
+- "Save" your configuration
+- "Create DB"; this will create all tables needed by openwebspider
+- (remember that this will remove all existing tables and will create them from scratch)
+- Now you are ready to start an openwebspider worker; first tab (Worker): Go
 
 ### NOTE
+
 Search and indexer web services holds the connection to the database.
 If you change the database settings you should restart the openwebspider's server.
 
-
 ## Web Services
-* [Indexer Web Service](http://www.openwebspider.org/documentation/openwebspider-js/openwebspider-indexer-web-service/ "Indexer Web Service")
-* [Search Web Service](http://www.openwebspider.org/documentation/openwebspider-js/search-web-service/ "Search Web Service")
 
-
-## Known issue
-The openwebspider's UI uses the Helvetica font; under linux you might not have it installed and,
-especially with google chrome, the application is rendered very badly.
-You can fix this by installing Microsoft TrueType core fonts
-(e.g. in Ubuntu, Debian, Mint, ...)
-```sh
-# apt-get install ttf-mscorefonts-installer
-```
-
-
-## Contacts
-	http://www.openwebspider.org/
-    info @ openwebspider.org
+- [Indexer Web Service](http://www.openwebspider.org/documentation/openwebspider-js/openwebspider-indexer-web-service/ "Indexer Web Service")
+- [Search Web Service](http://www.openwebspider.org/documentation/openwebspider-js/search-web-service/ "Search Web Service")
 
 
 ## License
