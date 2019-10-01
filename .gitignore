@@ -1,3 +1,5 @@
-node_modules
-ows.conf
+node_modules/
+conf/
+
+*.pdf
 package.lock
