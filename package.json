@@ -2,36 +2,21 @@
   "name": "openwebspider",
   "description": "Open Source Web Crawler",
   "version": "0.3.0",
-  "author": {
-    "name": "Alimonti Stefano <shen139@gmail.com>"
+  "license": "MIT",
+  "author": "Joseph Schultz <joseph@acupajoe.io>",
+  "scripts": {
+    "start": "node ."
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shen139/openwebspider.git"
+    "url": "https://github.com/acupajoe/openwebspider.git"
   },
-  "license": "MIT",
-  "homepage": "http://www.openwebspider.org/",
-  "bugs": {
-    "url": "https://github.com/shen139/openwebspider/issues"
-  },
-  "keywords": [
-    "async",
-    "mirrorjs",
-    "crawler",
-    "robot",
-    "bot",
-    "spider",
-    "web crawler",
-    "web robot",
-    "web bot",
-    "web spider",
-    "search engine"
-  ],
   "main": "src/server.js",
   "dependencies": {
     "async": "^2.1.5",
     "cheerio": "^0.22.0",
     "finalhandler": "^1.0.0",
+    "follow-redirects": "^1.9.0",
     "html-entities": "^1.2.0",
     "mysql": "^2.13.0",
     "pg": "^6.1.2",

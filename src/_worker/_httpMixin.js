@@ -1,5 +1,4 @@
-var http = require("http");
-var https = require("https");
+const { http, https } = require("follow-redirects");
 var logger = require("../_utils/logger");
 
 module.exports = function() {
